@@ -1,5 +1,5 @@
 {
-  "name": "@robloach/datfile",
+  "name": "datfile",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -10,5 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "simple-text-parser": "^1.0.0"
-  }
+  },
+  "repository": "github:RobLoach/datfile"
 }
