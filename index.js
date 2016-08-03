@@ -1,18 +1,26 @@
-var fs = require('fs')
-var Parser = require('simple-text-parser');
+var Parser = require('simple-text-parser')
 
-function parse(data) {
-	var parser = new Parser();
+function parse(datFile) {
+	var parser = new Parser()
 	parser.addRule(/game \(\n\tname "(.*?)"\n\tdescription "(.*?)"\n/g, function (tag, name, description) {
-		return { type: 'game', text: tag, name: name, description: description}
+		return {
+			type: 'game',
+			text: tag,
+			name: name,
+			description: description
+		}
 	})
 
-	var romParser = new Parser();
+	var romParser = new Parser()
 	romParser.addRule(/rom \( (.*?)\)\n/g, function (tag, contents) {
-		return {type: 'rom', text: tag, contents: contents}
+		return {
+			type: 'rom',
+			text: tag,
+			contents: contents
+		}
 	})
 
-	var tree = parser.toTree(data);
+	var tree = parser.toTree(datFile)
 	var out = []
 	var length = -1
 	for (var entryIndex in tree) {
@@ -28,36 +36,57 @@ function parse(data) {
 						}
 					}
 				}
-				break;
+				break
 			case 'game':
 				length = out.push({
 					name: entry.name,
 					description: entry.description,
 					roms: []
 				})
-				break;
+				break
 		}
 	}
 
-	var contentsParser = new Parser();
+	var contentsParser = new Parser()
 	contentsParser.addRule(/name "(.*?)"/g, function (tag, name) {
-		return {type: 'name', text: tag, name: name}
+		return {
+			type: 'name',
+			text: tag,
+			name: name
+		}
 	})
 	contentsParser.addRule(/size (\d+) /g, function (tag, size) {
-		return {type: 'size', text: tag, size: size}
+		return {
+			type: 'size',
+			text: tag,
+			size: size
+		}
 	})
 	contentsParser.addRule(/crc (\S+) /g, function (tag, crc) {
-		return {type: 'crc', text: tag, crc: crc}
+		return {
+			type: 'crc',
+			text: tag,
+			crc: crc
+		}
 	})
 	contentsParser.addRule(/md5 (\S+) /g, function (tag, md5) {
-		return {type: 'md5', text: tag, md5: md5}
+		return {
+			type: 'md5',
+			text: tag,
+			md5: md5
+		}
 	})
 	contentsParser.addRule(/sha1 (\S+) /g, function (tag, sha1) {
-		return {type: 'sha1', text: tag, sha1: sha1}
+		return {
+			type: 'sha1',
+			text: tag,
+			sha1: sha1
+		}
 	})
 
+	var romIndex = null
 	for (var gameIndex in out) {
-		for (var romIndex in out[gameIndex].roms) {
+		for (romIndex in out[gameIndex].roms) {
 			var rom = out[gameIndex].roms[romIndex]
 			var data = contentsParser.toTree(rom.contents)
 
@@ -65,19 +94,19 @@ function parse(data) {
 				switch (data[romData].type) {
 					case 'name':
 						out[gameIndex].roms[romIndex].name = data[romData].name
-						break;
+						break
 					case 'size':
 						out[gameIndex].roms[romIndex].size = data[romData].size
-						break;
+						break
 					case 'crc':
 						out[gameIndex].roms[romIndex].crc = data[romData].crc
-						break;
+						break
 					case 'md5':
 						out[gameIndex].roms[romIndex].md5 = data[romData].md5
-						break;
+						break
 					case 'sha1':
 						out[gameIndex].roms[romIndex].sha1 = data[romData].sha1
-						break;
+						break
 				}
 			}
 			if (out[gameIndex].roms[romIndex].contents) {
