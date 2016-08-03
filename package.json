@@ -1,0 +1,15 @@
+{
+  "name": "@robloach/datfile",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Rob Loach (http://robloach.net)",
+  "license": "MIT",
+  "dependencies": {
+    "block-parser": "^1.0.1",
+    "simple-text-parser": "^1.0.0"
+  }
+}
