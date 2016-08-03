@@ -1,0 +1,60 @@
+clrmamepro (
+	name "ScummVM CGE2"
+	description "ScummVM - CGE2 Engine Games"
+	category "ScummVM"
+	version v1.03
+	date 2016-07-24
+	author "Gruby"
+	forcemerging split
+	forcenodump required
+)
+
+game (
+	name sfinx
+	description "Sfinx (DOS/Freeware v1.1)"
+	year 1997
+	manufacturer "L.K. Avalon"
+	sourcefile cge2
+	rom ( name vol.cat size 129024 crc 38a6fe53 md5 23a8d6c2bc405f7faf47bf777723a70d )
+	rom ( name vol.dat size 34182773 crc f17fdf6a md5 d47e9a2a66a5e841c3e29916e2845c06 )
+)
+
+game (
+	name sfinx-1
+	description "Sfinx (DOS/Freeware v0.3)"
+	year 1997
+	manufacturer "L.K. Avalon"
+	sourcefile cge2
+	rom ( name vol.cat size 129024 crc 67d24312 md5 4c9a315120f871876b7be3ac2b149dd8 )
+	rom ( name vol.dat size 34183430 crc 65d95ba4 md5 2475e007905b22cc1e9150a118d90a95 )
+)
+
+game (
+	name sfinx-2
+	description "Sfinx (DOS/Freeware v1.0)"
+	year 1997
+	manufacturer "L.K. Avalon"
+	sourcefile cge2
+	rom ( name vol.cat size 129024 crc 3a681503 md5 6520e582444f4094b8d0677a3efb4f43 )
+	rom ( name vol.dat size 34183443 crc 026e1651 md5 602513e7a5e8cbf4af846a9c5f5f26d4 )
+)
+
+game (
+	name sfinx-pl
+	description "Sfinx (DOS/Polish Freeware)"
+	year 1997
+	manufacturer "L.K. Avalon"
+	sourcefile cge2
+	rom ( name VOL.CAT size 129024 crc 674c10f4 md5 f5f27cfbd12c736eb34fe1880c1aeaff )
+	rom ( name VOL.DAT size 34180844 crc ac3309ae md5 141f234cd1981ea3b18600996a26efd0 )
+)
+
+game (
+	name sfinx-pl-1
+	description "Sfinx (DOS/Polish Freeware v1.0)"
+	year 1997
+	manufacturer "L.K. Avalon"
+	sourcefile cge2
+	rom ( name vol.cat size 129024 crc 76ea3fa7 md5 cf954e62a02911ca1073b905d6678b3a )
+	rom ( name vol.dat size 34180164 crc 002130d7 md5 748e046d8285ad11d2d33e03f8cfbd68 )
+)

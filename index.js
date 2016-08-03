@@ -48,9 +48,17 @@ function parse(datFile) {
 	}
 
 	var contentsParser = new Parser()
-	contentsParser.addRule(/name "(.*?)"/g, function (tag, name) {
+	contentsParser.addRule(/name "(.*?)" /g, function (tag, name) {
 		return {
 			type: 'name',
+			text: tag,
+			name: name
+		}
+	})
+	contentsParser.addRule(/name "?(.*?)"? /g, function (tag, name) {
+		return {
+			type: 'name',
+			backup: true,
 			text: tag,
 			name: name
 		}
@@ -93,7 +101,9 @@ function parse(datFile) {
 			for (var romData in data) {
 				switch (data[romData].type) {
 					case 'name':
-						out[gameIndex].roms[romIndex].name = data[romData].name
+						if (!('name' in out[gameIndex].roms[romIndex])) {
+							out[gameIndex].roms[romIndex].name = data[romData].name
+						}
 						break
 					case 'size':
 						out[gameIndex].roms[romIndex].size = data[romData].size
