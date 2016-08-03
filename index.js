@@ -2,7 +2,7 @@ var Parser = require('simple-text-parser')
 
 function parse(datFile) {
 	var parser = new Parser()
-	parser.addRule(/game \(\n\tname "(.*?)"\n\tdescription "(.*?)"\n/g, function (tag, name, description) {
+	parser.addRule(/game \(\n\tname "?(.*?)"?\n\tdescription "?(.*?)"?\n/g, function (tag, name, description) {
 		return {
 			type: 'game',
 			text: tag,
