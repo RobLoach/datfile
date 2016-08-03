@@ -10,5 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "simple-text-parser": "^1.0.0"
-  }
+  },
+  "repository": "github:RobLoach/datfile"
 }
