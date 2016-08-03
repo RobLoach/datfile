@@ -9,6 +9,7 @@
   "author": "Rob Loach (http://robloach.net)",
   "license": "MIT",
   "dependencies": {
+    "convert-newline": "0.0.5",
     "simple-text-parser": "^1.0.0"
   },
   "repository": "github:RobLoach/datfile"

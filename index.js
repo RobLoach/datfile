@@ -1,6 +1,9 @@
 var Parser = require('simple-text-parser')
+var convertNewline = require('convert-newline')
+var newline = convertNewline('lf').string()
 
 function parse(datFile) {
+	datFile = newline(datFile)
 	var parser = new Parser()
 	parser.addRule(/game \(\n\tname "?(.*?)"?\n\tdescription "?(.*?)"?\n/g, function (tag, name, description) {
 		return {
