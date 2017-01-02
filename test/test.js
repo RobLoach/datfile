@@ -40,4 +40,18 @@ describe('robloach-datfile', function () {
 			})
 		})
 	})
+	describe('test4', function () {
+		var test4 = path.join(__dirname, 'test4.dat')
+		it('should find game crc information', function (done) {
+			var options = {
+				ignoreHeader: true
+			}
+			datfile.parseFile(test4, options).then(function (database) {
+				assert.equal(database[0].entries[0].name, 'dinothawr.game')
+				done()
+			}).catch(function (err) {
+				done(err)
+			})
+		})
+	})
 })
