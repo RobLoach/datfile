@@ -1,0 +1,44 @@
+DOSCenter (
+	Name:Total DOS Collection - Feb 2015
+	Description: release #9
+	Version: 1.0
+	Date: Feb 10 2015
+	Author: hargle
+	Homepage: nugnugnug.com
+	Comment: everything we've done so far!  Replaces all earlier torrents.
+)
+game (
+	name "Arithmetic Games Set 1 [f1] (1981)(IBM, Science Research Associates) [Strategy, Educational].zip"
+	file ( name !@#$%$#@.!@# size 4096 date 1981/08/04 00:00:00 crc 8f7abb81 )
+	file ( name ARITHMET.BIN size 768 date 1981/07/17 00:00:00 crc 0a082568 )
+	file ( name AUTOEXEC.BAT size 15 date 1980/01/01 00:00:00 crc 1588181a )
+	file ( name BASICA.COM size 59570 date 1983/10/20 11:00:00 crc 92293842 )
+	file ( name BEANO.BAS size 13568 date 1981/09/23 00:00:00 crc ce5152f0 )
+	file ( name COLOR.BAS size 849 date 1980/01/01 00:00:00 crc e613a0a9 )
+	file ( name COLOR.BA_ size 896 date 1980/01/01 00:00:00 crc 5b3d0c4a )
+	file ( name file_id.diz size 284 date 2014/11/23 07:53:30 crc 2cef41f9 )
+	file ( name GAMES.BIN size 384 date 1981/07/17 00:00:00 crc 6dfba958 )
+	file ( name LOGO.BAS size 9835 date 1980/01/01 00:00:00 crc 62d2fd58 )
+	file ( name LOGO.BA_ size 9728 date 1980/01/01 00:00:00 crc 535ba370 )
+	file ( name MENU.BAS size 8832 date 1981/09/23 00:00:00 crc 04f321c0 )
+	file ( name ROCKETS.BAS size 19584 date 1981/09/23 00:00:00 crc 82a12a69 )
+	file ( name SET.BIN size 256 date 1981/07/17 00:00:00 crc e2a76050 )
+	file ( name SETUP1.BAT size 351 date 1980/01/01 00:00:00 crc 08826672 )
+	file ( name SETUP2.BAT size 314 date 1980/01/01 00:00:00 crc 818bafc5 )
+)
+
+game (
+	name "Chess (1981)(M.C. Rakaska, S.W. Huggins) [Strategy, Chess].zip"
+	file ( name Chess.bas size 19129 date 2007/01/31 19:46:20 crc 50577473 )
+	file ( name Chess.exe size 46464 date 1998/12/25 19:46:00 crc 826d1c0d )
+	file ( name file_id.diz size 198 date 2014/11/23 07:53:32 crc 72399680 )
+)
+
+game (
+	name "Donkey (1981)(IBM, Microsoft) [Racing - Driving].zip"
+	file ( name DONKEY.BAS size 4651 date 1981/08/04 12:00:00 crc 36a0e169 )
+	file ( name file_id.diz size 178 date 2014/11/23 07:53:32 crc 2e158abb )
+	file ( name GWBASIC.EXE size 80592 date 2001/05/04 06:58:22 crc 8462d0e4 )
+	file ( name PLAY.BAT size 15 date 2009/11/22 22:06:38 crc 96f695ab )
+	file ( name SAMPLES.BAS size 2432 date 1981/08/04 00:00:00 crc 59e7a2a8 )
+)
