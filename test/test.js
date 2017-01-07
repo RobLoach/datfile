@@ -54,4 +54,18 @@ describe('robloach-datfile', function () {
 			})
 		})
 	})
+	describe('doublespace', function () {
+		var doublespace = path.join(__dirname, 'doublespace.dat')
+		it('should find game crc information', function (done) {
+			var options = {
+				ignoreHeader: true
+			}
+			datfile.parseFile(doublespace, options).then(function (database) {
+				assert.equal(database[2].entries[1].crc, '026e1651')
+				done()
+			}).catch(function (err) {
+				done(err)
+			})
+		})
+	})
 })
