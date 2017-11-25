@@ -1,69 +1,69 @@
-var datfile = require('..')
-var path = require('path')
-var assert = require('assert')
-var mocha = require('mocha')
+const datfile = require('..')
+const path = require('path')
+const assert = require('assert')
+const mocha = require('mocha')
 
-var describe = mocha.describe
-var it = mocha.it
+const describe = mocha.describe
+const it = mocha.it
 
-describe('robloach-datfile', function () {
-	describe('test', function () {
-		var file = path.join(__dirname, 'test.dat')
-		it('should find the header information', function (done) {
-			datfile.parseFile(file).then(function (database) {
+describe('robloach-datfile', () => {
+	describe('test', () => {
+		const file = path.join(__dirname, 'test.dat')
+		it('should find the header information', done => {
+			datfile.parseFile(file).then(database => {
 				assert.equal(database[0].name, 'Nintendo - Game Boy')
 				done()
-			}).catch(function (err) {
+			}).catch(err => {
 				done(err)
 			})
 		})
 	})
-	describe('test2', function () {
-		var test2 = path.join(__dirname, 'test2.dat')
-		it('should find game header information', function (done) {
-			datfile.parseFile(test2).then(function (database) {
+	describe('test2', () => {
+		const test2 = path.join(__dirname, 'test2.dat')
+		it('should find game header information', done => {
+			datfile.parseFile(test2).then(database => {
 				assert.equal(database[1].name, 'sfinx')
 				done()
-			}).catch(function (err) {
+			}).catch(err => {
 				done(err)
 			})
 		})
 	})
-	describe('test3', function () {
-		var test3 = path.join(__dirname, 'test3.dat')
-		it('should find game crc information', function (done) {
-			datfile.parseFile(test3).then(function (database) {
+	describe('test3', () => {
+		const test3 = path.join(__dirname, 'test3.dat')
+		it('should find game crc information', done => {
+			datfile.parseFile(test3).then(database => {
 				assert.equal(database[1].entries[0].crc, '8f7abb81')
 				done()
-			}).catch(function (err) {
+			}).catch(err => {
 				done(err)
 			})
 		})
 	})
-	describe('test4', function () {
-		var test4 = path.join(__dirname, 'test4.dat')
-		it('should find game crc information', function (done) {
-			var options = {
+	describe('test4', () => {
+		const test4 = path.join(__dirname, 'test4.dat')
+		it('should find game crc information', done => {
+			const options = {
 				ignoreHeader: true
 			}
-			datfile.parseFile(test4, options).then(function (database) {
+			datfile.parseFile(test4, options).then(database => {
 				assert.equal(database[0].entries[0].name, 'dinothawr.game')
 				done()
-			}).catch(function (err) {
+			}).catch(err => {
 				done(err)
 			})
 		})
 	})
-	describe('doublespace', function () {
-		var doublespace = path.join(__dirname, 'doublespace.dat')
-		it('should find game crc information', function (done) {
-			var options = {
+	describe('doublespace', () => {
+		const doublespace = path.join(__dirname, 'doublespace.dat')
+		it('should find game crc information', done => {
+			const options = {
 				ignoreHeader: true
 			}
-			datfile.parseFile(doublespace, options).then(function (database) {
+			datfile.parseFile(doublespace, options).then(database => {
 				assert.equal(database[2].entries[1].crc, '026e1651')
 				done()
-			}).catch(function (err) {
+			}).catch(err => {
 				done(err)
 			})
 		})
