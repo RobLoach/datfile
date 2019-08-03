@@ -1,20 +1,19 @@
-const datfile = require('..')
 const path = require('path')
 const assert = require('assert')
 const mocha = require('mocha')
+const datfile = require('..')
 
-const describe = mocha.describe
-const it = mocha.it
+const {describe, it} = mocha
 
 describe('robloach-datfile', () => {
 	describe('test', () => {
 		const file = path.join(__dirname, 'test.dat')
 		it('should find the header information', done => {
 			datfile.parseFile(file).then(database => {
-				assert.equal(database[0].name, 'Nintendo - Game Boy')
+				assert.strictEqual(database[0].name, 'Nintendo - Game Boy')
 				done()
-			}).catch(err => {
-				done(err)
+			}).catch(error => {
+				done(error)
 			})
 		})
 	})
@@ -22,10 +21,10 @@ describe('robloach-datfile', () => {
 		const test2 = path.join(__dirname, 'test2.dat')
 		it('should find game header information', done => {
 			datfile.parseFile(test2).then(database => {
-				assert.equal(database[1].name, 'sfinx')
+				assert.strictEqual(database[1].name, 'sfinx')
 				done()
-			}).catch(err => {
-				done(err)
+			}).catch(error => {
+				done(error)
 			})
 		})
 	})
@@ -33,10 +32,10 @@ describe('robloach-datfile', () => {
 		const test3 = path.join(__dirname, 'test3.dat')
 		it('should find game crc information', done => {
 			datfile.parseFile(test3).then(database => {
-				assert.equal(database[1].entries[0].crc, '8f7abb81')
+				assert.strictEqual(database[1].entries[0].crc, '8f7abb81')
 				done()
-			}).catch(err => {
-				done(err)
+			}).catch(error => {
+				done(error)
 			})
 		})
 	})
@@ -47,10 +46,10 @@ describe('robloach-datfile', () => {
 				ignoreHeader: true
 			}
 			datfile.parseFile(test4, options).then(database => {
-				assert.equal(database[0].entries[0].name, 'dinothawr.game')
+				assert.strictEqual(database[0].entries[0].name, 'dinothawr.game')
 				done()
-			}).catch(err => {
-				done(err)
+			}).catch(error => {
+				done(error)
 			})
 		})
 	})
@@ -61,10 +60,10 @@ describe('robloach-datfile', () => {
 				ignoreHeader: true
 			}
 			datfile.parseFile(doublespace, options).then(database => {
-				assert.equal(database[2].entries[1].crc, '026e1651')
+				assert.strictEqual(database[2].entries[1].crc, '026e1651')
 				done()
-			}).catch(err => {
-				done(err)
+			}).catch(error => {
+				done(error)
 			})
 		})
 	})

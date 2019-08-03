@@ -1,6 +1,6 @@
 {
   "name": "robloach-datfile",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "ClrMamePro DAT file parser for Node.js.",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": "https://github.com/RobLoach/datfile.git",
   "devDependencies": {
-    "mocha": "^5.0.5",
-    "xo": "^0.20.3"
+    "mocha": "^6.2.0",
+    "xo": "^0.24.0"
   }
 }
