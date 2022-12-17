@@ -43,7 +43,7 @@ describe('robloach-datfile', () => {
 		const test4 = path.join(__dirname, 'test4.dat')
 		it('should find game crc information', done => {
 			const options = {
-				ignoreHeader: true
+				ignoreHeader: true,
 			}
 			datfile.parseFile(test4, options).then(database => {
 				assert.strictEqual(database[0].entries[0].name, 'dinothawr.game')
@@ -57,7 +57,7 @@ describe('robloach-datfile', () => {
 		const doublespace = path.join(__dirname, 'doublespace.dat')
 		it('should find game crc information', done => {
 			const options = {
-				ignoreHeader: true
+				ignoreHeader: true,
 			}
 			datfile.parseFile(doublespace, options).then(database => {
 				assert.strictEqual(database[2].entries[1].crc, '026e1651')
