@@ -1,5 +1,5 @@
 {
-  "name": "@robloach/datfile",
+  "name": "robloach-datfile",
   "version": "2.4.0",
   "description": "ClrMamePro DAT file parser for Node.js.",
   "main": "index.js",
