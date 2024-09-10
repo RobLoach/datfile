@@ -4,8 +4,7 @@
   "description": "ClrMamePro DAT file parser for Node.js.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "posttest": "xo --no-semicolon"
+    "test": "mocha"
   },
   "author": "Rob Loach (http://robloach.net)",
   "license": "MIT",
@@ -14,16 +13,6 @@
   },
   "repository": "https://github.com/RobLoach/datfile.git",
   "devDependencies": {
-    "mocha": "^10.2.0",
-    "xo": "^0.53.1"
-  },
-  "xo": {
-    "rules": {
-      "unicorn/prefer-string-slice": 0,
-      "unicorn/prefer-module": 0,
-      "unicorn/prefer-node-protocol": 0,
-      "unicorn/switch-case-braces": 0,
-      "unicorn/no-array-push-push": 0
-    }
+    "mocha": "^10.7.3"
   }
 }
