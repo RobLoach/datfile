@@ -1,6 +1,6 @@
 # robloach-datfile
 
-A [clrmamepro .dat file format](https://github.com/mnadareski/wizzardRedux/wiki/DAT-File-Formats) parser for Node.js.
+A [clrmamepro .dat file format](https://github.com/SabreTools/SabreTools/wiki/DatFile-Formats#clrmamepro-format) parser for Node.js.
 
 ## Usage
 
