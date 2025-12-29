@@ -1,0 +1,30 @@
+clrmamepro (
+	name "Sega - Mega Drive - Genesis"
+	description "Sega - Mega Drive - Genesis"
+	version "2025.11.10"
+	homepage "http://github.com/robloach/libretro-dats"
+)
+
+game (
+	name "007 Shitou - The Duel (Japan) (En)"
+	region "Japan"
+	serial "T-48073-00"
+	rom ( name "007 Shitou - The Duel (Japan) (En).md" size 524288 crc AEB4B262 md5 83BDDF31E7571AEFC6ADD5D00707DF9E sha1 7E0DE7011A60A1462DC48594F3CAA956FF942281 serial "T-48073-00" )
+)
+game (
+	name "10 Super Jogos (Brazil) (En)"
+	region "Brazil"
+	serial "MK-1281"
+	rom ( name "10 Super Jogos (Brazil) (En).md" size 4194304 crc C19AE368 md5 0D1C2D48509985F2D79B0FC3C8FE213A sha1 791A4DE13CFE2AF4302AAC969753D67DD76E89C8 serial "MK-1281" )
+)
+game (
+	name "14-in-1 (Taiwan) (En) (Pirate)"
+	region "Taiwan"
+	rom ( name "14-in-1 (Taiwan) (En) (Aftermarket) (Pirate).md" size 4194304 crc 5DAE911B md5 3C141CDCC3D9F8C45BC3F9F4197D92CD sha1 7551B201328D4B31DDA741B947D1E177D1E5B897 )
+)
+game (
+	name "16t (Japan) (Game no Kanzume Otokuyou)"
+	region "Japan"
+	serial "00054503-00"
+	rom ( name "16t (Japan) (Game no Kanzume Otokuyou).md" size 262144 crc 98149EAF md5 15361874DEAB5A8C3A7611A81F041131 sha1 FF564E8DB95697103CACA81C45EFB29F47E7E7E0 serial "00054503-00" )
+)
