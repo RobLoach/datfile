@@ -67,4 +67,19 @@ describe('robloach-datfile', () => {
 			})
 		})
 	})
+	describe('serial', () => {
+		const serial = path.join(__dirname, 'serial.dat')
+		it('should find game serial information', done => {
+			const options = {
+				ignoreHeader: true,
+			}
+			datfile.parseFile(serial, options).then(database => {
+				assert.strictEqual(database[0].entries[0].name, '007 Shitou - The Duel (Japan) (En).md')
+				assert.strictEqual(database[0].entries[0].serial, 'T-48073-00')
+				done()
+			}).catch(error => {
+				done(error)
+			})
+		})
+	})
 })
