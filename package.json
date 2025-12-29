@@ -1,6 +1,6 @@
 {
   "name": "robloach-datfile",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "ClrMamePro DAT file parser for Node.js.",
   "main": "index.js",
   "scripts": {
