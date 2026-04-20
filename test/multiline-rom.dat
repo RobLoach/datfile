@@ -1,0 +1,17 @@
+clrmamepro (
+	name "Example DAT"
+	description "Example DAT"
+	version 1
+)
+
+game (
+	name "Example Game"
+	description "Example Game"
+	rom (
+		name "multi-line.bin"
+		size 1234
+		crc A1B2C3D4
+		md5 0123456789ABCDEF0123456789ABCDEF
+		sha1 0123456789ABCDEF0123456789ABCDEF01234567
+	)
+)

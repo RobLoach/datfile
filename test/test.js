@@ -82,4 +82,21 @@ describe('robloach-datfile', () => {
 			})
 		})
 	})
+	describe('multiline rom', () => {
+		const multilineRom = path.join(__dirname, 'multiline-rom.dat')
+		it('should parse rom entries split across multiple lines', done => {
+			const options = {
+				ignoreHeader: true,
+			}
+			datfile.parseFile(multilineRom, options).then(database => {
+				assert.strictEqual(database[0].entries[0].name, 'multi-line.bin')
+				assert.strictEqual(database[0].entries[0].size, '1234')
+				assert.strictEqual(database[0].entries[0].crc, 'A1B2C3D4')
+				assert.strictEqual(database[0].entries[0].sha1, '0123456789ABCDEF0123456789ABCDEF01234567')
+				done()
+			}).catch(error => {
+				done(error)
+			})
+		})
+	})
 })
